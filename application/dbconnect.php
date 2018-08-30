@@ -1,16 +1,16 @@
 <?php
-    $servername = "swin-rds.coz5ywwvjdnp.us-east-1.rds.amazonaws.com";
+    $servername = "coz5ywwvjdnp.us-east-1.rds.amazonaws.com";
     $username = "foo";
     $password = "foobarbaz";
+    $dbname = "swindb";
+    $port = 3306;
 
-    try {
-        $conn = new PDO("mysql:host=$servername;port=3306;dbname=swindb", $username, $password); 
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully"; 
-        }
-    catch(PDOException $e)
-        {
-        echo "Connection failed: " . $e->getMessage();
-        }
+    // Create connection
+    $conn = new mysqli($servername, $port, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    echo 'Connected successfully';
+    $conn->close();
 ?>
