@@ -4,6 +4,6 @@
     </head>
 
     <body>
-        <?php echo '<p>Hello World!! This is Prod</p>'; ?>
+        <?php echo '<p>Hello World!! This is UPDATED Prod</p>'; ?>
     </body>
 </html>
