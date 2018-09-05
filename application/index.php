@@ -4,6 +4,6 @@
     </head>
 
     <body>
-        <?php echo '<p>Hello World!! CocaCola</p>'; ?>
+        <?php echo '<p>Hello World!! Pepsi</p>'; ?>
     </body>
 </html>
